@@ -1,0 +1,401 @@
+,Region,ScoreType,BestSource,SourcesSet,Value,IsBest,NbFolds
+0,Amazonas,OOS,Colombia & GT,Colombia,0.031735867818953656,False,48
+1,Amazonas,InSample,Colombia & GT,Colombia,0.3600712255790586,False,48
+2,Anzoategui,OOS,Colombia & GT,Colombia,-4.148096902159265,False,48
+3,Anzoategui,InSample,Colombia & GT,Colombia,0.3372723718536148,False,48
+4,Apure,OOS,Colombia & GT,Colombia,-0.32088669778346635,False,48
+5,Apure,InSample,Colombia & GT,Colombia,0.2488440306310133,False,48
+6,Aragua,OOS,Colombia & GT,Colombia,-0.3509011051286972,False,48
+7,Aragua,InSample,Colombia & GT,Colombia,0.2938065895467459,False,48
+8,Barinas,OOS,Colombia & GT,Colombia,-1.5479695474610216,False,48
+9,Barinas,InSample,Colombia & GT,Colombia,0.3422192248111925,False,48
+10,Bolivar,OOS,Colombia & GT,Colombia,-0.09988484691317524,False,48
+11,Bolivar,InSample,Colombia & GT,Colombia,-0.07537617677640096,False,48
+12,Carabobo,OOS,Colombia & GT,Colombia,-0.21480854006971264,False,48
+13,Carabobo,InSample,Colombia & GT,Colombia,0.42192325244611495,False,48
+14,Cojedes,OOS,Colombia & GT,Colombia,0.0007186252511804938,False,48
+15,Cojedes,InSample,Colombia & GT,Colombia,0.2446156641891745,False,48
+16,Delta Amacuro,OOS,Colombia & GT,Colombia,-0.03027801028494825,False,48
+17,Delta Amacuro,InSample,Colombia & GT,Colombia,0.3674539459110285,False,48
+18,Distrito Federal,OOS,Colombia & GT,Colombia,0.10456244476675547,False,48
+19,Distrito Federal,InSample,Colombia & GT,Colombia,0.5784252089565329,False,48
+20,Falcon,OOS,Colombia & GT,Colombia,-1.3463845135708183,False,48
+21,Falcon,InSample,Colombia & GT,Colombia,0.21256240864370368,False,48
+22,Guarico,OOS,Colombia & GT,Colombia,-1.4338007893345064,False,48
+23,Guarico,InSample,Colombia & GT,Colombia,0.25144508846834124,False,48
+24,Lara,OOS,Colombia & GT,Colombia,0.1390190012370175,False,48
+25,Lara,InSample,Colombia & GT,Colombia,0.5315634918098495,False,48
+26,Merida,OOS,Colombia & GT,Colombia,0.20027147115357136,False,48
+27,Merida,InSample,Colombia & GT,Colombia,0.6723958165237061,False,48
+28,Miranda,OOS,Colombia & GT,Colombia,-0.42786673422994537,False,48
+29,Miranda,InSample,Colombia & GT,Colombia,0.5350829362609357,False,48
+30,Monagas,OOS,Colombia & GT,Colombia,-0.9516808838346772,False,48
+31,Monagas,InSample,Colombia & GT,Colombia,0.3659607553342422,False,48
+32,Nueva Esparta,OOS,Colombia & GT,Colombia,-0.2763466776726933,False,48
+33,Nueva Esparta,InSample,Colombia & GT,Colombia,0.16686305966027504,False,48
+34,Portuguesa,OOS,Colombia & GT,Colombia,-0.4403548661212085,False,48
+35,Portuguesa,InSample,Colombia & GT,Colombia,0.3593381010879576,False,48
+36,Sucre,OOS,Colombia & GT,Colombia,-1.7346287165261132,False,48
+37,Sucre,InSample,Colombia & GT,Colombia,0.3225211416671102,False,48
+38,Tachira,OOS,Colombia & GT,Colombia,-0.7561459798401824,False,48
+39,Tachira,InSample,Colombia & GT,Colombia,0.7201353690273146,False,48
+40,Total,OOS,Colombia & GT,Colombia,-0.6378635279092837,False,48
+41,Total,InSample,Colombia & GT,Colombia,0.5097541597147359,False,48
+42,Trujillo,OOS,Colombia & GT,Colombia,-0.4381097734061468,False,48
+43,Trujillo,InSample,Colombia & GT,Colombia,0.3158701831814724,False,48
+44,Vargas,OOS,Colombia & GT,Colombia,-0.4830133808496857,False,48
+45,Vargas,InSample,Colombia & GT,Colombia,0.3215902294264537,False,48
+46,Yaracuy,OOS,Colombia & GT,Colombia,-0.006129676072520685,False,48
+47,Yaracuy,InSample,Colombia & GT,Colombia,0.4072985332145021,False,48
+48,Zulia,OOS,Colombia & GT,Colombia,-0.7077239169836196,False,48
+49,Zulia,InSample,Colombia & GT,Colombia,0.20915216917515844,False,48
+50,Amazonas,OOS,Colombia & GT,Colombia Border & GT,-0.013387196020153036,False,48
+51,Amazonas,InSample,Colombia & GT,Colombia Border & GT,0.38875623794161895,False,48
+52,Anzoategui,OOS,Colombia & GT,Colombia Border & GT,-0.7417515322715986,False,48
+53,Anzoategui,InSample,Colombia & GT,Colombia Border & GT,0.5632289164748867,False,48
+54,Apure,OOS,Colombia & GT,Colombia Border & GT,-0.5766254655316818,False,48
+55,Apure,InSample,Colombia & GT,Colombia Border & GT,0.4462931197587803,False,48
+56,Aragua,OOS,Colombia & GT,Colombia Border & GT,-0.31667485692569103,False,48
+57,Aragua,InSample,Colombia & GT,Colombia Border & GT,0.5460936138125743,False,48
+58,Barinas,OOS,Colombia & GT,Colombia Border & GT,-0.22893044156143905,False,48
+59,Barinas,InSample,Colombia & GT,Colombia Border & GT,0.41227088584543503,False,48
+60,Bolivar,OOS,Colombia & GT,Colombia Border & GT,0.14745222558558446,False,48
+61,Bolivar,InSample,Colombia & GT,Colombia Border & GT,0.3767243638254699,False,48
+62,Carabobo,OOS,Colombia & GT,Colombia Border & GT,-0.17973190971061806,False,48
+63,Carabobo,InSample,Colombia & GT,Colombia Border & GT,0.6353748284067429,False,48
+64,Cojedes,OOS,Colombia & GT,Colombia Border & GT,-0.350873608511354,False,48
+65,Cojedes,InSample,Colombia & GT,Colombia Border & GT,0.3370320697885263,False,48
+66,Delta Amacuro,OOS,Colombia & GT,Colombia Border & GT,0.11390079492130335,False,48
+67,Delta Amacuro,InSample,Colombia & GT,Colombia Border & GT,0.44816845553492224,False,48
+68,Distrito Federal,OOS,Colombia & GT,Colombia Border & GT,0.1814799942128753,False,48
+69,Distrito Federal,InSample,Colombia & GT,Colombia Border & GT,0.8312001143450278,False,48
+70,Falcon,OOS,Colombia & GT,Colombia Border & GT,0.2277950613164831,False,48
+71,Falcon,InSample,Colombia & GT,Colombia Border & GT,0.5846283017237563,False,48
+72,Guarico,OOS,Colombia & GT,Colombia Border & GT,-0.24042470623540324,False,48
+73,Guarico,InSample,Colombia & GT,Colombia Border & GT,0.4874565894018167,False,48
+74,Lara,OOS,Colombia & GT,Colombia Border & GT,0.2510463480675392,False,48
+75,Lara,InSample,Colombia & GT,Colombia Border & GT,0.7339657281032832,False,48
+76,Merida,OOS,Colombia & GT,Colombia Border & GT,-0.25379392888703145,False,48
+77,Merida,InSample,Colombia & GT,Colombia Border & GT,0.6286351787347484,False,48
+78,Miranda,OOS,Colombia & GT,Colombia Border & GT,0.28804247677177264,False,48
+79,Miranda,InSample,Colombia & GT,Colombia Border & GT,0.8435163985535085,False,48
+80,Monagas,OOS,Colombia & GT,Colombia Border & GT,-0.06922415344683341,False,48
+81,Monagas,InSample,Colombia & GT,Colombia Border & GT,0.5055112877830884,False,48
+82,Nueva Esparta,OOS,Colombia & GT,Colombia Border & GT,0.11966807730773375,False,48
+83,Nueva Esparta,InSample,Colombia & GT,Colombia Border & GT,0.5704437562203111,False,48
+84,Portuguesa,OOS,Colombia & GT,Colombia Border & GT,-0.3127779620904059,False,48
+85,Portuguesa,InSample,Colombia & GT,Colombia Border & GT,0.3164847977796537,False,48
+86,Sucre,OOS,Colombia & GT,Colombia Border & GT,0.04804592081626147,False,48
+87,Sucre,InSample,Colombia & GT,Colombia Border & GT,0.5813022316797527,False,48
+88,Tachira,OOS,Colombia & GT,Colombia Border & GT,0.056615010798723886,False,48
+89,Tachira,InSample,Colombia & GT,Colombia Border & GT,0.7332991507665558,False,48
+90,Total,OOS,Colombia & GT,Colombia Border & GT,0.32952985770170073,False,48
+91,Total,InSample,Colombia & GT,Colombia Border & GT,0.7136424769800027,False,48
+92,Trujillo,OOS,Colombia & GT,Colombia Border & GT,0.0717159398879218,False,48
+93,Trujillo,InSample,Colombia & GT,Colombia Border & GT,0.5842907405635629,False,48
+94,Vargas,OOS,Colombia & GT,Colombia Border & GT,-0.22273951931507985,False,48
+95,Vargas,InSample,Colombia & GT,Colombia Border & GT,0.6562099273781452,False,48
+96,Yaracuy,OOS,Colombia & GT,Colombia Border & GT,0.13635632041605672,False,48
+97,Yaracuy,InSample,Colombia & GT,Colombia Border & GT,0.6436706860810606,False,48
+98,Zulia,OOS,Colombia & GT,Colombia Border & GT,-0.10102027158139616,False,48
+99,Zulia,InSample,Colombia & GT,Colombia Border & GT,0.5727457135779506,False,48
+100,Amazonas,OOS,Colombia & GT,Colombia & GT,-0.2744511003750667,True,48
+101,Amazonas,InSample,Colombia & GT,Colombia & GT,0.4810078260158781,True,48
+102,Anzoategui,OOS,Colombia & GT,Colombia & GT,-3.5328109144814768,True,48
+103,Anzoategui,InSample,Colombia & GT,Colombia & GT,0.8453096328285439,True,48
+104,Apure,OOS,Colombia & GT,Colombia & GT,-0.5333650409472164,True,48
+105,Apure,InSample,Colombia & GT,Colombia & GT,0.616919663358797,True,48
+106,Aragua,OOS,Colombia & GT,Colombia & GT,-2.112388194799075,True,48
+107,Aragua,InSample,Colombia & GT,Colombia & GT,0.7914257076370289,True,48
+108,Barinas,OOS,Colombia & GT,Colombia & GT,0.05754999449667043,True,48
+109,Barinas,InSample,Colombia & GT,Colombia & GT,0.5858169946729939,True,48
+110,Bolivar,OOS,Colombia & GT,Colombia & GT,0.11497705282218518,True,48
+111,Bolivar,InSample,Colombia & GT,Colombia & GT,0.4558954553330485,True,48
+112,Carabobo,OOS,Colombia & GT,Colombia & GT,0.03509341237497121,True,48
+113,Carabobo,InSample,Colombia & GT,Colombia & GT,0.803770850533486,True,48
+114,Cojedes,OOS,Colombia & GT,Colombia & GT,-0.1220104114406564,True,48
+115,Cojedes,InSample,Colombia & GT,Colombia & GT,0.6582562434883755,True,48
+116,Delta Amacuro,OOS,Colombia & GT,Colombia & GT,-0.0021796252130654725,True,48
+117,Delta Amacuro,InSample,Colombia & GT,Colombia & GT,0.6249017557595198,True,48
+118,Distrito Federal,OOS,Colombia & GT,Colombia & GT,-0.01793006406318431,True,48
+119,Distrito Federal,InSample,Colombia & GT,Colombia & GT,0.9060194421257092,True,48
+120,Falcon,OOS,Colombia & GT,Colombia & GT,-4.808741795681959,True,48
+121,Falcon,InSample,Colombia & GT,Colombia & GT,0.700187416363962,True,48
+122,Guarico,OOS,Colombia & GT,Colombia & GT,-1.2160941132817358,True,48
+123,Guarico,InSample,Colombia & GT,Colombia & GT,0.7759158648318979,True,48
+124,Lara,OOS,Colombia & GT,Colombia & GT,0.1558160727669885,True,48
+125,Lara,InSample,Colombia & GT,Colombia & GT,0.8580185026606719,True,48
+126,Merida,OOS,Colombia & GT,Colombia & GT,0.11184891673240772,True,48
+127,Merida,InSample,Colombia & GT,Colombia & GT,0.8808425535924096,True,48
+128,Miranda,OOS,Colombia & GT,Colombia & GT,-0.18988307517844216,True,48
+129,Miranda,InSample,Colombia & GT,Colombia & GT,0.9118912213815552,True,48
+130,Monagas,OOS,Colombia & GT,Colombia & GT,-1.6109865638269496,True,48
+131,Monagas,InSample,Colombia & GT,Colombia & GT,0.7291931350272833,True,48
+132,Nueva Esparta,OOS,Colombia & GT,Colombia & GT,-0.19134141106948133,True,48
+133,Nueva Esparta,InSample,Colombia & GT,Colombia & GT,0.7803748848961416,True,48
+134,Portuguesa,OOS,Colombia & GT,Colombia & GT,-1.5376790191082654,True,48
+135,Portuguesa,InSample,Colombia & GT,Colombia & GT,0.5200404432545078,True,48
+136,Sucre,OOS,Colombia & GT,Colombia & GT,-3.683311042932573,True,48
+137,Sucre,InSample,Colombia & GT,Colombia & GT,0.7412168063620399,True,48
+138,Tachira,OOS,Colombia & GT,Colombia & GT,-0.4181181425803835,True,48
+139,Tachira,InSample,Colombia & GT,Colombia & GT,0.8276600717695304,True,48
+140,Total,OOS,Colombia & GT,Colombia & GT,0.21795037843200732,True,48
+141,Total,InSample,Colombia & GT,Colombia & GT,0.9014698058160842,True,48
+142,Trujillo,OOS,Colombia & GT,Colombia & GT,-0.5134770076349855,True,48
+143,Trujillo,InSample,Colombia & GT,Colombia & GT,0.7492475449613818,True,48
+144,Vargas,OOS,Colombia & GT,Colombia & GT,-2.166754928605136,True,48
+145,Vargas,InSample,Colombia & GT,Colombia & GT,0.7769143446134499,True,48
+146,Yaracuy,OOS,Colombia & GT,Colombia & GT,-0.03687131873413629,True,48
+147,Yaracuy,InSample,Colombia & GT,Colombia & GT,0.8144951245663399,True,48
+148,Zulia,OOS,Colombia & GT,Colombia & GT,-0.5539566745892113,True,48
+149,Zulia,InSample,Colombia & GT,Colombia & GT,0.7518374395987009,True,48
+150,Amazonas,OOS,Colombia & GT,Colombia & GT by State,-0.2818965081846689,False,48
+151,Amazonas,InSample,Colombia & GT,Colombia & GT by State,0.40924304682547397,False,48
+152,Anzoategui,OOS,Colombia & GT,Colombia & GT by State,-1.222470285156731,False,48
+153,Anzoategui,InSample,Colombia & GT,Colombia & GT by State,0.6184887236922743,False,48
+154,Apure,OOS,Colombia & GT,Colombia & GT by State,-0.3976264828772063,False,48
+155,Apure,InSample,Colombia & GT,Colombia & GT by State,0.3728889265444152,False,48
+156,Aragua,OOS,Colombia & GT,Colombia & GT by State,-0.20317536686619087,False,48
+157,Aragua,InSample,Colombia & GT,Colombia & GT by State,0.6971388871934856,False,48
+158,Barinas,OOS,Colombia & GT,Colombia & GT by State,-1.0283323375211135,False,48
+159,Barinas,InSample,Colombia & GT,Colombia & GT by State,0.4988403912932927,False,48
+160,Bolivar,OOS,Colombia & GT,Colombia & GT by State,0.04451487661295938,False,48
+161,Bolivar,InSample,Colombia & GT,Colombia & GT by State,0.2117288299297904,False,48
+162,Carabobo,OOS,Colombia & GT,Colombia & GT by State,-0.2453286513423423,False,48
+163,Carabobo,InSample,Colombia & GT,Colombia & GT by State,0.5457166861306735,False,48
+164,Cojedes,OOS,Colombia & GT,Colombia & GT by State,0.02238628726302605,False,48
+165,Cojedes,InSample,Colombia & GT,Colombia & GT by State,0.4692456003233406,False,48
+166,Delta Amacuro,OOS,Colombia & GT,Colombia & GT by State,0.15066557071072495,False,48
+167,Delta Amacuro,InSample,Colombia & GT,Colombia & GT by State,0.490594303638189,False,48
+168,Distrito Federal,OOS,Colombia & GT,Colombia & GT by State,0.17131425360385544,False,48
+169,Distrito Federal,InSample,Colombia & GT,Colombia & GT by State,0.8252460719667924,False,48
+170,Falcon,OOS,Colombia & GT,Colombia & GT by State,0.08948377878205249,False,48
+171,Falcon,InSample,Colombia & GT,Colombia & GT by State,0.634319992909039,False,48
+172,Guarico,OOS,Colombia & GT,Colombia & GT by State,-0.040923290284319284,False,48
+173,Guarico,InSample,Colombia & GT,Colombia & GT by State,0.4905277339915828,False,48
+174,Lara,OOS,Colombia & GT,Colombia & GT by State,0.12891768071003662,False,48
+175,Lara,InSample,Colombia & GT,Colombia & GT by State,0.6954458400915264,False,48
+176,Merida,OOS,Colombia & GT,Colombia & GT by State,0.3842986463178846,False,48
+177,Merida,InSample,Colombia & GT,Colombia & GT by State,0.7233965258570532,False,48
+178,Miranda,OOS,Colombia & GT,Colombia & GT by State,0.4287443316100039,False,48
+179,Miranda,InSample,Colombia & GT,Colombia & GT by State,0.8056668204852967,False,48
+180,Monagas,OOS,Colombia & GT,Colombia & GT by State,-0.5189331447902639,False,48
+181,Monagas,InSample,Colombia & GT,Colombia & GT by State,0.5650205925013991,False,48
+182,Nueva Esparta,OOS,Colombia & GT,Colombia & GT by State,-0.9556447824386192,False,48
+183,Nueva Esparta,InSample,Colombia & GT,Colombia & GT by State,0.5972200207724501,False,48
+184,Portuguesa,OOS,Colombia & GT,Colombia & GT by State,-0.07564519373227507,False,48
+185,Portuguesa,InSample,Colombia & GT,Colombia & GT by State,0.43898623835221495,False,48
+186,Sucre,OOS,Colombia & GT,Colombia & GT by State,-2.480818755499752,False,48
+187,Sucre,InSample,Colombia & GT,Colombia & GT by State,0.5665764064517917,False,48
+188,Tachira,OOS,Colombia & GT,Colombia & GT by State,-0.20679107699660806,False,48
+189,Tachira,InSample,Colombia & GT,Colombia & GT by State,0.7953637285021724,False,48
+190,Total,OOS,Colombia & GT,Colombia & GT by State,0.2707266013796481,False,48
+191,Total,InSample,Colombia & GT,Colombia & GT by State,0.7870529577714122,False,48
+192,Trujillo,OOS,Colombia & GT,Colombia & GT by State,0.04446928161478125,False,48
+193,Trujillo,InSample,Colombia & GT,Colombia & GT by State,0.5736449207406255,False,48
+194,Vargas,OOS,Colombia & GT,Colombia & GT by State,-0.1379737113193884,False,48
+195,Vargas,InSample,Colombia & GT,Colombia & GT by State,0.6415874136591386,False,48
+196,Yaracuy,OOS,Colombia & GT,Colombia & GT by State,0.1745671324548529,False,48
+197,Yaracuy,InSample,Colombia & GT,Colombia & GT by State,0.5918458241259549,False,48
+198,Zulia,OOS,Colombia & GT,Colombia & GT by State,-1.9680781016335869,False,48
+199,Zulia,InSample,Colombia & GT,Colombia & GT by State,0.5787903562603398,False,48
+200,Amazonas,OOS,Colombia & GT,Colombia & GT by Symptom,0.2520281041459661,False,48
+201,Amazonas,InSample,Colombia & GT,Colombia & GT by Symptom,0.4144019641778023,False,48
+202,Anzoategui,OOS,Colombia & GT,Colombia & GT by Symptom,-1.238132784692711,False,48
+203,Anzoategui,InSample,Colombia & GT,Colombia & GT by Symptom,0.45031455720344105,False,48
+204,Apure,OOS,Colombia & GT,Colombia & GT by Symptom,-0.08496205473070484,False,48
+205,Apure,InSample,Colombia & GT,Colombia & GT by Symptom,0.350008202195661,False,48
+206,Aragua,OOS,Colombia & GT,Colombia & GT by Symptom,-0.588811164288227,False,48
+207,Aragua,InSample,Colombia & GT,Colombia & GT by Symptom,0.6129765862174014,False,48
+208,Barinas,OOS,Colombia & GT,Colombia & GT by Symptom,-3.486556051990614,False,48
+209,Barinas,InSample,Colombia & GT,Colombia & GT by Symptom,0.4140965506098344,False,48
+210,Bolivar,OOS,Colombia & GT,Colombia & GT by Symptom,0.0027314275927800002,False,48
+211,Bolivar,InSample,Colombia & GT,Colombia & GT by Symptom,0.18939155222903148,False,48
+212,Carabobo,OOS,Colombia & GT,Colombia & GT by Symptom,-0.3639764095272461,False,48
+213,Carabobo,InSample,Colombia & GT,Colombia & GT by Symptom,0.5489086227006682,False,48
+214,Cojedes,OOS,Colombia & GT,Colombia & GT by Symptom,0.21810976418748296,False,48
+215,Cojedes,InSample,Colombia & GT,Colombia & GT by Symptom,0.44263541765246506,False,48
+216,Delta Amacuro,OOS,Colombia & GT,Colombia & GT by Symptom,0.15683424093273068,False,48
+217,Delta Amacuro,InSample,Colombia & GT,Colombia & GT by Symptom,0.4170573551559602,False,48
+218,Distrito Federal,OOS,Colombia & GT,Colombia & GT by Symptom,0.10640772537273856,False,48
+219,Distrito Federal,InSample,Colombia & GT,Colombia & GT by Symptom,0.7017280448802644,False,48
+220,Falcon,OOS,Colombia & GT,Colombia & GT by Symptom,-5.502229007481182,False,48
+221,Falcon,InSample,Colombia & GT,Colombia & GT by Symptom,0.2644084918915665,False,48
+222,Guarico,OOS,Colombia & GT,Colombia & GT by Symptom,-0.08143733178896095,False,48
+223,Guarico,InSample,Colombia & GT,Colombia & GT by Symptom,0.4363122697160666,False,48
+224,Lara,OOS,Colombia & GT,Colombia & GT by Symptom,0.19513760183826745,False,48
+225,Lara,InSample,Colombia & GT,Colombia & GT by Symptom,0.6465442076046957,False,48
+226,Merida,OOS,Colombia & GT,Colombia & GT by Symptom,-0.0267820305177644,False,48
+227,Merida,InSample,Colombia & GT,Colombia & GT by Symptom,0.7313180058631883,False,48
+228,Miranda,OOS,Colombia & GT,Colombia & GT by Symptom,-0.6428154564607882,False,48
+229,Miranda,InSample,Colombia & GT,Colombia & GT by Symptom,0.685757386605882,False,48
+230,Monagas,OOS,Colombia & GT,Colombia & GT by Symptom,-0.7846751645026788,False,48
+231,Monagas,InSample,Colombia & GT,Colombia & GT by Symptom,0.5147486538736978,False,48
+232,Nueva Esparta,OOS,Colombia & GT,Colombia & GT by Symptom,-0.3934220646217232,False,48
+233,Nueva Esparta,InSample,Colombia & GT,Colombia & GT by Symptom,0.4202576361760069,False,48
+234,Portuguesa,OOS,Colombia & GT,Colombia & GT by Symptom,-0.38806017400827386,False,48
+235,Portuguesa,InSample,Colombia & GT,Colombia & GT by Symptom,0.3920430208272584,False,48
+236,Sucre,OOS,Colombia & GT,Colombia & GT by Symptom,-2.3932373930596795,False,48
+237,Sucre,InSample,Colombia & GT,Colombia & GT by Symptom,0.4816657207893261,False,48
+238,Tachira,OOS,Colombia & GT,Colombia & GT by Symptom,0.05888769558705975,False,48
+239,Tachira,InSample,Colombia & GT,Colombia & GT by Symptom,0.7439263476361049,False,48
+240,Total,OOS,Colombia & GT,Colombia & GT by Symptom,0.14978149288613518,False,48
+241,Total,InSample,Colombia & GT,Colombia & GT by Symptom,0.6996352891758647,False,48
+242,Trujillo,OOS,Colombia & GT,Colombia & GT by Symptom,-0.05666500300579892,False,48
+243,Trujillo,InSample,Colombia & GT,Colombia & GT by Symptom,0.5196551045746861,False,48
+244,Vargas,OOS,Colombia & GT,Colombia & GT by Symptom,-2.5447223235907788,False,48
+245,Vargas,InSample,Colombia & GT,Colombia & GT by Symptom,0.5384887519979342,False,48
+246,Yaracuy,OOS,Colombia & GT,Colombia & GT by Symptom,0.06061433859435661,False,48
+247,Yaracuy,InSample,Colombia & GT,Colombia & GT by Symptom,0.6364052613928446,False,48
+248,Zulia,OOS,Colombia & GT,Colombia & GT by Symptom,-1.2372125339156774,False,48
+249,Zulia,InSample,Colombia & GT,Colombia & GT by Symptom,0.3404947165036768,False,48
+250,Amazonas,OOS,Colombia & GT,Dengue GT CO,-1.0108350507752322,False,48
+251,Amazonas,InSample,Colombia & GT,Dengue GT CO,0.3035295033771407,False,48
+252,Anzoategui,OOS,Colombia & GT,Dengue GT CO,-22.60252387300924,False,48
+253,Anzoategui,InSample,Colombia & GT,Dengue GT CO,0.5119682272542144,False,48
+254,Apure,OOS,Colombia & GT,Dengue GT CO,-5.779726285461731,False,48
+255,Apure,InSample,Colombia & GT,Dengue GT CO,0.3924165982817891,False,48
+256,Aragua,OOS,Colombia & GT,Dengue GT CO,-4.733104174781854,False,48
+257,Aragua,InSample,Colombia & GT,Dengue GT CO,0.1845823733478392,False,48
+258,Barinas,OOS,Colombia & GT,Dengue GT CO,-0.11835942167644566,False,48
+259,Barinas,InSample,Colombia & GT,Dengue GT CO,0.20731707821389625,False,48
+260,Bolivar,OOS,Colombia & GT,Dengue GT CO,-0.011019691099857898,False,48
+261,Bolivar,InSample,Colombia & GT,Dengue GT CO,0.16370643326680726,False,48
+262,Carabobo,OOS,Colombia & GT,Dengue GT CO,-3.0410115080599485,False,48
+263,Carabobo,InSample,Colombia & GT,Dengue GT CO,0.5073967959572787,False,48
+264,Cojedes,OOS,Colombia & GT,Dengue GT CO,-3.3850079715426373,False,48
+265,Cojedes,InSample,Colombia & GT,Dengue GT CO,0.2322902153185817,False,48
+266,Delta Amacuro,OOS,Colombia & GT,Dengue GT CO,-0.06739247317622699,False,48
+267,Delta Amacuro,InSample,Colombia & GT,Dengue GT CO,0.2531804879510341,False,48
+268,Distrito Federal,OOS,Colombia & GT,Dengue GT CO,-0.2251015646912169,False,48
+269,Distrito Federal,InSample,Colombia & GT,Dengue GT CO,0.4734941097488933,False,48
+270,Falcon,OOS,Colombia & GT,Dengue GT CO,-3.8866774535771382,False,48
+271,Falcon,InSample,Colombia & GT,Dengue GT CO,0.2376353705747684,False,48
+272,Guarico,OOS,Colombia & GT,Dengue GT CO,-5.366766825958115,False,48
+273,Guarico,InSample,Colombia & GT,Dengue GT CO,0.3655151371008739,False,48
+274,Lara,OOS,Colombia & GT,Dengue GT CO,-2.156033673333372,False,48
+275,Lara,InSample,Colombia & GT,Dengue GT CO,0.33508584764926264,False,48
+276,Merida,OOS,Colombia & GT,Dengue GT CO,-5.428334388023698,False,48
+277,Merida,InSample,Colombia & GT,Dengue GT CO,0.5115160907768262,False,48
+278,Miranda,OOS,Colombia & GT,Dengue GT CO,-2.3452251328932454,False,48
+279,Miranda,InSample,Colombia & GT,Dengue GT CO,0.4831256261183117,False,48
+280,Monagas,OOS,Colombia & GT,Dengue GT CO,-0.29789283724385474,False,48
+281,Monagas,InSample,Colombia & GT,Dengue GT CO,0.2756677194318905,False,48
+282,Nueva Esparta,OOS,Colombia & GT,Dengue GT CO,-0.9494319178322472,False,48
+283,Nueva Esparta,InSample,Colombia & GT,Dengue GT CO,0.18070372370071167,False,48
+284,Portuguesa,OOS,Colombia & GT,Dengue GT CO,-1.2549798193441766,False,48
+285,Portuguesa,InSample,Colombia & GT,Dengue GT CO,-1.7559680454595838,False,48
+286,Sucre,OOS,Colombia & GT,Dengue GT CO,-7.74321063469692,False,48
+287,Sucre,InSample,Colombia & GT,Dengue GT CO,0.28443453338770003,False,48
+288,Tachira,OOS,Colombia & GT,Dengue GT CO,-3.0349860492321263,False,48
+289,Tachira,InSample,Colombia & GT,Dengue GT CO,0.4991984377377847,False,48
+290,Total,OOS,Colombia & GT,Dengue GT CO,-1.7212432162048028,False,48
+291,Total,InSample,Colombia & GT,Dengue GT CO,0.38118261581652135,False,48
+292,Trujillo,OOS,Colombia & GT,Dengue GT CO,-0.5129733059347459,False,48
+293,Trujillo,InSample,Colombia & GT,Dengue GT CO,0.2661810263154979,False,48
+294,Vargas,OOS,Colombia & GT,Dengue GT CO,-0.9817580755201714,False,48
+295,Vargas,InSample,Colombia & GT,Dengue GT CO,0.1994318254948766,False,48
+296,Yaracuy,OOS,Colombia & GT,Dengue GT CO,-0.4862199874315367,False,48
+297,Yaracuy,InSample,Colombia & GT,Dengue GT CO,0.21019568712550774,False,48
+298,Zulia,OOS,Colombia & GT,Dengue GT CO,-5.611661942970128,False,48
+299,Zulia,InSample,Colombia & GT,Dengue GT CO,0.26955208032587397,False,48
+300,Amazonas,OOS,Colombia & GT,GT by State - Ven & Col,0.3007239001955737,False,48
+301,Amazonas,InSample,Colombia & GT,GT by State - Ven & Col,0.2421304141438331,False,48
+302,Anzoategui,OOS,Colombia & GT,GT by State - Ven & Col,-2.9191096688927347,False,48
+303,Anzoategui,InSample,Colombia & GT,GT by State - Ven & Col,0.3306194915471756,False,48
+304,Apure,OOS,Colombia & GT,GT by State - Ven & Col,-0.05229060990654144,False,48
+305,Apure,InSample,Colombia & GT,GT by State - Ven & Col,0.25341442265777403,False,48
+306,Aragua,OOS,Colombia & GT,GT by State - Ven & Col,0.030203484770746525,False,48
+307,Aragua,InSample,Colombia & GT,GT by State - Ven & Col,0.4032231803297399,False,48
+308,Barinas,OOS,Colombia & GT,GT by State - Ven & Col,-0.5727701294265319,False,48
+309,Barinas,InSample,Colombia & GT,GT by State - Ven & Col,-0.3731566590356313,False,48
+310,Bolivar,OOS,Colombia & GT,GT by State - Ven & Col,-0.017397316733975817,False,48
+311,Bolivar,InSample,Colombia & GT,GT by State - Ven & Col,-0.4416113799711292,False,48
+312,Carabobo,OOS,Colombia & GT,GT by State - Ven & Col,-0.12420594279813835,False,48
+313,Carabobo,InSample,Colombia & GT,GT by State - Ven & Col,0.40756398097632063,False,48
+314,Cojedes,OOS,Colombia & GT,GT by State - Ven & Col,-0.08675354807565605,False,48
+315,Cojedes,InSample,Colombia & GT,GT by State - Ven & Col,0.282490301182337,False,48
+316,Delta Amacuro,OOS,Colombia & GT,GT by State - Ven & Col,-0.06602597133075007,False,48
+317,Delta Amacuro,InSample,Colombia & GT,GT by State - Ven & Col,0.21946383250962365,False,48
+318,Distrito Federal,OOS,Colombia & GT,GT by State - Ven & Col,-0.034127949990684366,False,48
+319,Distrito Federal,InSample,Colombia & GT,GT by State - Ven & Col,0.6592195900736971,False,48
+320,Falcon,OOS,Colombia & GT,GT by State - Ven & Col,-2.7634287711047216,False,48
+321,Falcon,InSample,Colombia & GT,GT by State - Ven & Col,0.3599071499189872,False,48
+322,Guarico,OOS,Colombia & GT,GT by State - Ven & Col,-0.13285313384437392,False,48
+323,Guarico,InSample,Colombia & GT,GT by State - Ven & Col,0.3081216567355798,False,48
+324,Lara,OOS,Colombia & GT,GT by State - Ven & Col,-0.09144488327224454,False,48
+325,Lara,InSample,Colombia & GT,GT by State - Ven & Col,0.39401428528316096,False,48
+326,Merida,OOS,Colombia & GT,GT by State - Ven & Col,0.13093259990134742,False,48
+327,Merida,InSample,Colombia & GT,GT by State - Ven & Col,0.5094630915123466,False,48
+328,Miranda,OOS,Colombia & GT,GT by State - Ven & Col,-0.5557462300723046,False,48
+329,Miranda,InSample,Colombia & GT,GT by State - Ven & Col,0.6994355446128175,False,48
+330,Monagas,OOS,Colombia & GT,GT by State - Ven & Col,0.023338367638062518,False,48
+331,Monagas,InSample,Colombia & GT,GT by State - Ven & Col,0.30611959774723985,False,48
+332,Nueva Esparta,OOS,Colombia & GT,GT by State - Ven & Col,0.013222075501827413,False,48
+333,Nueva Esparta,InSample,Colombia & GT,GT by State - Ven & Col,0.28371171719625105,False,48
+334,Portuguesa,OOS,Colombia & GT,GT by State - Ven & Col,-0.11646999479781694,False,48
+335,Portuguesa,InSample,Colombia & GT,GT by State - Ven & Col,-0.3000528337863864,False,48
+336,Sucre,OOS,Colombia & GT,GT by State - Ven & Col,-7.2212314076134225,False,48
+337,Sucre,InSample,Colombia & GT,GT by State - Ven & Col,0.3896798187271451,False,48
+338,Tachira,OOS,Colombia & GT,GT by State - Ven & Col,-0.8642611201761671,False,48
+339,Tachira,InSample,Colombia & GT,GT by State - Ven & Col,0.5404107870067552,False,48
+340,Total,OOS,Colombia & GT,GT by State - Ven & Col,-0.4617871581586641,False,48
+341,Total,InSample,Colombia & GT,GT by State - Ven & Col,0.5976138834606781,False,48
+342,Trujillo,OOS,Colombia & GT,GT by State - Ven & Col,-0.08919541777287665,False,48
+343,Trujillo,InSample,Colombia & GT,GT by State - Ven & Col,0.3705110672604101,False,48
+344,Vargas,OOS,Colombia & GT,GT by State - Ven & Col,-0.09814498654888304,False,48
+345,Vargas,InSample,Colombia & GT,GT by State - Ven & Col,0.4177290673830477,False,48
+346,Yaracuy,OOS,Colombia & GT,GT by State - Ven & Col,0.02550168376861261,False,48
+347,Yaracuy,InSample,Colombia & GT,GT by State - Ven & Col,0.4098049032093646,False,48
+348,Zulia,OOS,Colombia & GT,GT by State - Ven & Col,-0.24972624040470204,False,48
+349,Zulia,InSample,Colombia & GT,GT by State - Ven & Col,0.2499391755544954,False,48
+350,Amazonas,OOS,Colombia & GT,GT Venezuela,-0.07247414497280791,False,48
+351,Amazonas,InSample,Colombia & GT,GT Venezuela,0.2430565967325131,False,48
+352,Anzoategui,OOS,Colombia & GT,GT Venezuela,-0.7417515322715986,False,48
+353,Anzoategui,InSample,Colombia & GT,GT Venezuela,0.5632289164748867,False,48
+354,Apure,OOS,Colombia & GT,GT Venezuela,-0.3689947218535634,False,48
+355,Apure,InSample,Colombia & GT,GT Venezuela,0.4471042096948623,False,48
+356,Aragua,OOS,Colombia & GT,GT Venezuela,-0.012105276014770405,False,48
+357,Aragua,InSample,Colombia & GT,GT Venezuela,0.4549608458323866,False,48
+358,Barinas,OOS,Colombia & GT,GT Venezuela,-0.13019877404707406,False,48
+359,Barinas,InSample,Colombia & GT,GT Venezuela,0.241777251847625,False,48
+360,Bolivar,OOS,Colombia & GT,GT Venezuela,0.05256806851587148,False,48
+361,Bolivar,InSample,Colombia & GT,GT Venezuela,0.2916017560726146,False,48
+362,Carabobo,OOS,Colombia & GT,GT Venezuela,-0.3429448805363253,False,48
+363,Carabobo,InSample,Colombia & GT,GT Venezuela,0.6078529850216872,False,48
+364,Cojedes,OOS,Colombia & GT,GT Venezuela,-0.051968600937163816,False,48
+365,Cojedes,InSample,Colombia & GT,GT Venezuela,0.1855846364500966,False,48
+366,Delta Amacuro,OOS,Colombia & GT,GT Venezuela,-0.08953925747447622,False,48
+367,Delta Amacuro,InSample,Colombia & GT,GT Venezuela,0.3754024755981389,False,48
+368,Distrito Federal,OOS,Colombia & GT,GT Venezuela,0.17735954037579582,False,48
+369,Distrito Federal,InSample,Colombia & GT,GT Venezuela,0.8148676436550966,False,48
+370,Falcon,OOS,Colombia & GT,GT Venezuela,0.22467902032271087,False,48
+371,Falcon,InSample,Colombia & GT,GT Venezuela,0.5696482061814208,False,48
+372,Guarico,OOS,Colombia & GT,GT Venezuela,-0.24042470623540324,False,48
+373,Guarico,InSample,Colombia & GT,GT Venezuela,0.4874565894018167,False,48
+374,Lara,OOS,Colombia & GT,GT Venezuela,0.22204330589588428,False,48
+375,Lara,InSample,Colombia & GT,GT Venezuela,0.6533726227846868,False,48
+376,Merida,OOS,Colombia & GT,GT Venezuela,0.2676858626292623,False,48
+377,Merida,InSample,Colombia & GT,GT Venezuela,0.4933483673808915,False,48
+378,Miranda,OOS,Colombia & GT,GT Venezuela,0.3116171015318477,False,48
+379,Miranda,InSample,Colombia & GT,GT Venezuela,0.8488875254876163,False,48
+380,Monagas,OOS,Colombia & GT,GT Venezuela,-0.1122806363540314,False,48
+381,Monagas,InSample,Colombia & GT,GT Venezuela,0.5224322593704196,False,48
+382,Nueva Esparta,OOS,Colombia & GT,GT Venezuela,0.11966807730773375,False,48
+383,Nueva Esparta,InSample,Colombia & GT,GT Venezuela,0.5704437562203111,False,48
+384,Portuguesa,OOS,Colombia & GT,GT Venezuela,-0.34624522013252923,False,48
+385,Portuguesa,InSample,Colombia & GT,GT Venezuela,0.21038254184555727,False,48
+386,Sucre,OOS,Colombia & GT,GT Venezuela,-0.17789771043503122,False,48
+387,Sucre,InSample,Colombia & GT,GT Venezuela,0.5769751785874981,False,48
+388,Tachira,OOS,Colombia & GT,GT Venezuela,0.3796705166901292,False,48
+389,Tachira,InSample,Colombia & GT,GT Venezuela,0.6074683701585759,False,48
+390,Total,OOS,Colombia & GT,GT Venezuela,0.1862557929266011,False,48
+391,Total,InSample,Colombia & GT,GT Venezuela,0.6797202507347437,False,48
+392,Trujillo,OOS,Colombia & GT,GT Venezuela,-0.018895677611670214,False,48
+393,Trujillo,InSample,Colombia & GT,GT Venezuela,0.4911386614632279,False,48
+394,Vargas,OOS,Colombia & GT,GT Venezuela,-0.19376362614768936,False,48
+395,Vargas,InSample,Colombia & GT,GT Venezuela,0.6394365056894064,False,48
+396,Yaracuy,OOS,Colombia & GT,GT Venezuela,0.129531928049073,False,48
+397,Yaracuy,InSample,Colombia & GT,GT Venezuela,0.5930492811226833,False,48
+398,Zulia,OOS,Colombia & GT,GT Venezuela,-0.10102027158139616,False,48
+399,Zulia,InSample,Colombia & GT,GT Venezuela,0.5727457135779506,False,48
