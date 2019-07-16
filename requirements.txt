@@ -1,4 +1,9 @@
+os
 bokeh
 numpy
 pandas
+scipy
 scikit-learn
+glob
+geopandas
+json
