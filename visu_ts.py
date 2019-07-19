@@ -392,3 +392,5 @@ curdoc().add_root(column(regions_button_plt,source_set_button_plot,div,p_ts,\
                          div_separator,regions_button_bar,source_set_button_bar,\
                          div_bar,p_bar))
 curdoc().title = "Venezuela Situational Awareness"
+
+
