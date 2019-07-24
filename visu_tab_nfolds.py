@@ -10,7 +10,7 @@ import numpy as np
 from bokeh.plotting import figure
 # from bokeh.models import GeoJSONDataSource,LinearColorMapper,ColorBar
 from bokeh.models import ColumnDataSource,FactorRange,Panel
-# from bokeh.palettes import brewer, Category20, Viridis256, Category10
+from bokeh.palettes import Category10#, brewer, Category20, Viridis256
 # from bokeh.models import FixedTicker,NumeralTickFormatter,HoverTool
 # from bokeh.plotting import show as show_inline
 from bokeh.models.widgets import RadioButtonGroup, Div
@@ -18,17 +18,13 @@ from bokeh.layouts import column,WidgetBox#,row,widgetbox
 # from bokeh.io import curdoc
 # import situ_fn
 ###############################################################################
-def nfolds_tab(old_to_new_sources,old_to_new_regions,n_folds_list,
-               agg_all_nfolds):
+def nfolds_tab(old_to_new_sources,new_to_old_sources,old_to_new_regions,
+               n_folds_list,agg_all_nfolds):
     
     ## Get region names and list of sources
     region_names_new = list(old_to_new_regions.values())
     region_names_new.sort()
-    sourceset_display = ['Best'] + list(old_to_new_sources.keys())[1:]
-    
-    # All regions and sources
-    # all_regions = np.unique(agg_all_nfolds.Region).tolist()
-    # all_sources = np.unique(agg_all_nfolds.SourcesSet).tolist()
+    sourceset_display = ['Best'] + list(new_to_old_sources.keys())[1:]
     
     # Score types considered
     score_types = ['In Sample','OOS']
@@ -39,13 +35,13 @@ def nfolds_tab(old_to_new_sources,old_to_new_regions,n_folds_list,
     
     source_set_bar = 'Best'
     if source_set_bar == 'Best':
-        agg_n_gs_source = agg_n_gs.loc[agg_n_gs.IsBest,['ScoreType','NbFolds','Value']]
+        agg_n_gs_source = agg_n_gs.loc[agg_n_gs.IsBest,['ScoreType','NbFolds','Value']].\
+                                  sort_values(by='NbFolds',ascending=True)
     else:
         agg_n_gs_source = agg_n_gs.loc[agg_n_gs.SourcesSet == source_set_bar,\
-                                       ['ScoreType','NbFolds','Value']]
+                                  ['ScoreType','NbFolds','Value']].\
+                                  sort_values(by='NbFolds',ascending=True)
     
-    
-    agg_n_gs_source.sort_values(by='NbFolds',ascending=True,inplace=True)
     in_sample_vals = agg_n_gs_source.loc[agg_n_gs_source.ScoreType == 'InSample',\
                                          'Value'].values.tolist()
     OOS_vals = agg_n_gs_source.loc[agg_n_gs_source.ScoreType == 'OOS',\
@@ -56,13 +52,14 @@ def nfolds_tab(old_to_new_sources,old_to_new_regions,n_folds_list,
     x = [ (np.str(n), score) for n in n_folds_list for score in score_types ]
     
     counts = sum(zip(data_dict['In Sample'], data_dict['OOS']), ()) # like an hstack
-    source_bar = ColumnDataSource(data=dict(x=x, counts=counts))
+    colors = (Category10[3])[1:]*len(n_folds_list)
+    source_bar = ColumnDataSource(data=dict(x=x, counts=counts, color=colors))
     
-    p_bar = figure(x_range=FactorRange(*x), plot_height=250, plot_width=700,
+    p_bar = figure(x_range=FactorRange(*x), plot_height=350, plot_width=800,
                title='R squared as a function of number of intervals for training',
                toolbar_location=None, tools="")
     
-    p_bar.vbar(x='x', top='counts', width=0.9, source=source_bar)
+    p_bar.vbar(x='x', top='counts', width=0.9, source=source_bar,color='color')
     
     p_bar.y_range.start = -1
     p_bar.y_range.end = 1
@@ -93,13 +90,14 @@ def nfolds_tab(old_to_new_sources,old_to_new_regions,n_folds_list,
         # Update data to display
         agg_n_gs = agg_all_nfolds.loc[agg_all_nfolds.Region == gs_name_bar]
         if source_set_bar == 'Best':
-            agg_n_gs_source = agg_n_gs.loc[agg_n_gs.IsBest,['ScoreType','NbFolds','Value']]
+            agg_n_gs_source = agg_n_gs.loc[agg_n_gs.IsBest,\
+                                  ['ScoreType','NbFolds','Value']].\
+                                  sort_values(by='NbFolds',ascending=True)
         else:
-            source_set_bar = old_to_new_sources[source_set_bar]
             agg_n_gs_source = agg_n_gs.loc[agg_n_gs.SourcesSet == source_set_bar,\
-                                           ['ScoreType','NbFolds','Value']]
+                                  ['ScoreType','NbFolds','Value']].\
+                                  sort_values(by='NbFolds',ascending=True)
         
-        agg_n_gs_source.sort_values(by='NbFolds',ascending=True,inplace=True)
         in_sample_vals = agg_n_gs_source.loc[agg_n_gs_source.ScoreType == 'InSample',\
                                              'Value'].values.tolist()
         OOS_vals = agg_n_gs_source.loc[agg_n_gs_source.ScoreType == 'OOS',\
@@ -107,11 +105,11 @@ def nfolds_tab(old_to_new_sources,old_to_new_regions,n_folds_list,
         data_dict = {'Number Folds' : n_folds_list,
                      'In Sample' : in_sample_vals,
                      'OOS' : OOS_vals}
-        x = [ (np.str(n), score) for n in n_folds_list for score in score_types ]
         
         counts = sum(zip(data_dict['In Sample'], data_dict['OOS']), ()) # like an hstack
-        new_source = ColumnDataSource(data=dict(x=x, counts=counts))
-        source_bar.data = new_source.data
+        # new_source = ColumnDataSource(data=dict(x=x, counts=counts))
+        new_source_data = dict(x=x, counts=counts, color=colors)
+        source_bar.data = new_source_data
         
         new_text_bar = 'Gold Standard: ' + gs_name_bar + \
                        '<br>Predictor Set: ' + source_set_bar

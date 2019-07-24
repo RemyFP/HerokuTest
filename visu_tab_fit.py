@@ -18,12 +18,12 @@ from bokeh.layouts import column,WidgetBox#,row,widgetbox
 # from bokeh.io import curdoc
 import situ_fn
 ###############################################################################
-def get_graph_data(df_all,agg,df_goal,candidates_data,gs_name,source_set,
+def get_graph_data(df_all_n,agg,df_goal,candidates_data,gs_name,source_set,
                    train_dates,test_dates,old_to_new_regions,old_to_new_sources):
     # Get data of chosen gold standard and source set
-    results = df_all.loc[:,(df_all.loc['Region'] == gs_name[:-3]) & \
-                           (df_all.loc['SourcesSet'] == source_set) & \
-                           (df_all.loc['Column'] == 'id')].iloc[:,0]
+    results = df_all_n.loc[:,(df_all_n.loc['Region'] == gs_name[:-3]) & \
+                             (df_all_n.loc['SourcesSet'] == source_set) & \
+                             (df_all_n.loc['Column'] == 'id')].iloc[:,0]
     predictors_list = results.loc[results.index.isin(\
         [np.str(i) for i in range(pd.notnull(results).sum()-4)])].values.tolist()
     predictors_list = [x.replace('_','-') for x in predictors_list]
@@ -63,23 +63,28 @@ def get_graph_data(df_all,agg,df_goal,candidates_data,gs_name,source_set,
     return dates_train, dates_test, gs_ts,in_sample_forecast_ts,OOS_forecast_ts,\
         r_squared_in_sample, r_squared_OOS
 ###############################################################################
-def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
-            old_to_new_sources,new_to_old_sources,old_to_new_regions):
-    ## Get region names
+def fit_tab(agg_all_nfolds,df_all_nfolds,df_goal,candidates_data,train_dates,
+            test_dates,old_to_new_sources,new_to_old_sources,old_to_new_regions,
+            n_folds_list):
+    ## Get region names and list of n_folds values
     region_names_new = list(old_to_new_regions.values())
     region_names_new.sort()
+    n_folds_display = [np.str(x) for x in n_folds_list]
     
-    ## Pick gold standard and data source
+    ## Pick gold standard, data source and n_folds values to start with
     gs_name = 'AMAZONAS-VE'
-    source_set = 'Best'
-    if source_set == 'Best':
-        agg_source_best = agg.loc[(agg.Region == old_to_new_regions[gs_name[:-3]]),
+    source_set_data = 'Best'
+    n_folds_fit = n_folds_list[0]
+    agg_n = agg_all_nfolds.loc[agg_all_nfolds.NbFolds == n_folds_fit,:]
+    df_all_n = df_all_nfolds.loc[:,df_all_nfolds.loc['NbFolds'] == np.str(n_folds_fit)]
+    if source_set_data == 'Best':
+        agg_source_best = agg_n.loc[(agg_n.Region == old_to_new_regions[gs_name[:-3]]),
                                   'BestSource'].values[0]
-        source_set = new_to_old_sources[agg_source_best]
+        source_set_data = new_to_old_sources[agg_source_best]
     
     dates_train, dates_test, gs_ts,in_sample_forecast_ts,OOS_forecast_ts,\
             r_squared_in_sample, r_squared_OOS = get_graph_data(\
-                df_all,agg,df_goal,candidates_data,gs_name,source_set,
+                df_all_n,agg_n,df_goal,candidates_data,gs_name,source_set_data,
                 train_dates,test_dates,old_to_new_regions,old_to_new_sources)
     
     ### Create Bokeh graph
@@ -87,15 +92,18 @@ def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
     dates_train_plot = pd.to_datetime(dates_train)
     dates_test_plot = pd.to_datetime(dates_test)
     #xs = [dates_train,dates_test,dates_train,dates_test]
-    xs = [all_dates,dates_train_plot,dates_test_plot]
-    ys = [np.array(gs_ts),in_sample_forecast_ts,OOS_forecast_ts]
+    # min_y = [np.max(np.concatenate((np.array(gs_ts.T)[0],in_sample_forecast_ts,OOS_forecast_ts),axis=0))]
+    # max_y = [np.min(np.concatenate((np.array(gs_ts.T)[0],in_sample_forecast_ts,OOS_forecast_ts),axis=0))]
+    min_y,max_y = [np.min(np.array(gs_ts.T)[0])],[np.max(np.array(gs_ts.T)[0])]
+    xs = [all_dates,dates_train_plot,dates_test_plot,all_dates[:1],all_dates[:1]]
+    ys = [np.array(gs_ts),in_sample_forecast_ts,OOS_forecast_ts,min_y,max_y]
     source = ColumnDataSource(data=dict(
          x = xs,
          y = ys,
-         color = (Category10[3])[0:len(xs)],
-         group = ['Gold Standard','Forecast In Sample','Forecast OOS']))
+         color = (Category10[3])[0:len(xs)] +['#ffffff','#ffffff'],
+         group = ['Gold Standard','Forecast In Sample','Forecast OOS','','']))
     TOOLS="pan,wheel_zoom,box_zoom,reset,hover,save"
-    p_ts = figure(plot_width=800, plot_height=500,x_axis_type='datetime',
+    p_ts = figure(plot_width=1000, plot_height=500,x_axis_type='datetime',
                 title='', tools=TOOLS,)
     p_ts.multi_line(
          xs='x',
@@ -108,15 +116,16 @@ def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
     
     ## Radio buttons
     # Define buttons
-    sourceset_display = ['Best'] + list(old_to_new_sources.keys())[1:]
+    sourceset_display = ['Best'] + list(new_to_old_sources.keys())[1:]
     #sourceset_display = ['Best'] + sourceset_names_old[1:]
+    n_folds_button = RadioButtonGroup(labels=n_folds_display, active=0)
     source_set_button_plot = RadioButtonGroup(labels=sourceset_display, active=0)
     regions_button_plt = RadioButtonGroup(labels=region_names_new, active=0)
     
     # Text above graph
     div_text = 'In and Out of Sample fit <br>Gold Standard: ' + \
-        old_to_new_regions[gs_name[:-3]] + ' - Predictor Set: ' + \
-        old_to_new_sources[source_set] + '<br>' + \
+        old_to_new_regions[gs_name[:-3]] + '<br>Predictor Set: ' + \
+        old_to_new_sources[source_set_data] + '<br>' + \
         'In Sample R<sup>2</sup>: ' + np.str(np.round(r_squared_in_sample,2)) + \
         ' - ' + 'Out of Sample R<sup>2</sup>: ' + np.str(np.round(r_squared_OOS,2))
     div = Div(text=div_text,width=700, height=100)
@@ -125,7 +134,10 @@ def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
     # Update function
     def plot_callback(attr, old, new):
         # Get new selected value
-        #new_score = score_types[new.active]
+        n_folds_fit = np.int(n_folds_display[n_folds_button.active])
+        agg_n = agg_all_nfolds.loc[agg_all_nfolds.NbFolds == n_folds_fit,:]
+        df_all_n = df_all_nfolds.loc[:,df_all_nfolds.loc['NbFolds'] == np.str(n_folds_fit)]
+        
         gs_name_selected = region_names_new[regions_button_plt.active]
         if gs_name_selected == 'Distrito Federal':
             gs_name = 'DTTOMETRO-VE'
@@ -134,14 +146,17 @@ def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
             
         source_set = sourceset_display[source_set_button_plot.active]
         if source_set == 'Best':
-            agg_source_best = agg.loc[(agg.Region == old_to_new_regions[gs_name[:-3]]),
+            source_set_data = source_set
+            agg_source_best = agg_n.loc[(agg_n.Region == old_to_new_regions[gs_name[:-3]]),
                                       'BestSource'].values[0]
-            source_set = new_to_old_sources[agg_source_best]
-        
+            source_set_data = new_to_old_sources[agg_source_best]
+        else:
+            source_set_data = new_to_old_sources[source_set]
+            
         # Get data to update graph
         dates_train, dates_test, gs_ts,in_sample_forecast_ts,OOS_forecast_ts,\
             r_squared_in_sample, r_squared_OOS = get_graph_data(\
-                df_all,agg,df_goal,candidates_data,gs_name,source_set,
+                df_all_n,agg_n,df_goal,candidates_data,gs_name,source_set_data,
                 train_dates,test_dates,old_to_new_regions,old_to_new_sources)
     
         ### Create Bokeh graph
@@ -149,32 +164,32 @@ def fit_tab(agg,df_all,df_goal,candidates_data,train_dates,test_dates,
         dates_train_plot = pd.to_datetime(dates_train)
         dates_test_plot = pd.to_datetime(dates_test)
         #xs = [dates_train,dates_test,dates_train,dates_test]
-        xs = [all_dates,dates_train_plot,dates_test_plot]
-        ys = [np.array(gs_ts),in_sample_forecast_ts,OOS_forecast_ts]
-        #new_data = pd.DataFrame({'x':xs,'y':ys,'color':(Category10[3])[0:len(xs)]})
+        min_y,max_y = [np.min(np.array(gs_ts.T)[0])],[np.max(np.array(gs_ts.T)[0])]
+        xs = [all_dates,dates_train_plot,dates_test_plot,all_dates[:1],all_dates[:1]]
+        ys = [np.array(gs_ts),in_sample_forecast_ts,OOS_forecast_ts,min_y,max_y]
         
         new_source = ColumnDataSource(data=dict(
               x = xs,
               y = ys,
-              color = (Category10[3])[0:len(xs)],
-              group = ['Gold Standard','Forecast In Sample','Forecast OOS']))
+              color = (Category10[3])[0:len(xs)] +['#ffffff','#ffffff'],
+              group = ['Gold Standard','Forecast In Sample','Forecast OOS','','']))
         source.data = new_source.data
-        # p_ts.source = new_source
         
         new_text = 'In and Out of Sample fit <br>Gold Standard :' + \
             old_to_new_regions[gs_name[:-3]] + ' - Predictor Set: ' + \
-            old_to_new_sources[source_set] + '<br>' + \
+            source_set + '<br>' + \
             'In Sample R<sup>2</sup>: ' + np.str(np.round(r_squared_in_sample,2)) + \
             '<br>Out of Sample R<sup>2</sup>: ' + np.str(np.round(r_squared_OOS,2))
         div.text = new_text
         return
     ###########################################################################
     
+    n_folds_button.on_change('active', plot_callback)
     source_set_button_plot.on_change('active', plot_callback)
     regions_button_plt.on_change('active', plot_callback)
     
     # Put controls in a single element
-    controls = WidgetBox(regions_button_plt,source_set_button_plot)
+    controls = WidgetBox(n_folds_button,regions_button_plt,source_set_button_plot)
 	
 	# Create a row layout
     layout = column(controls,div,p_ts)
